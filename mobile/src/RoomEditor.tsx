@@ -1,5 +1,5 @@
 import { useRef, useState, type ReactNode } from 'react';
-import { Modal, Platform, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { Modal, Platform, ScrollView, StyleSheet, Text, View, useWindowDimensions, type ViewInstance } from 'react-native';
 import { MotionPressable as Pressable } from './Motion';
 import RoomVisual from './RoomVisual';
 import RoomFurniture from './RoomFurniture';
@@ -25,9 +25,9 @@ export default function RoomEditor({ room, children, devices }: { room: string; 
   const [selected, setSelected] = useState('');
   const [category, setCategory] = useState<typeof categories[number]>('เตียง');
   const [error, setError] = useState('');
-  const board = useRef<View>(null);
+  const board = useRef<ViewInstance>(null);
   const roomBounds = useRef({ width: 0, height: 0 });
-  const backdrop = useRef<View>(null);
+  const backdrop = useRef<ViewInstance>(null);
   const origin = useRef({ x: 0, y: 0 });
   const [ghost, setGhost] = useState<{ kind: FurnitureKind; x: number; y: number } | null>(null);
   const item = draft.decorations.find(d => d.id === selected);

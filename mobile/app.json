@@ -31,7 +31,9 @@
           "microphonePermission": "Allow Synapse to use the microphone for Thai smart home voice commands.",
           "enableBackgroundRecording": false
         }
-      ]
+      ],
+      "expo-status-bar",
+      "expo-asset"
     ],
     "web": {
       "favicon": "./assets/favicon.png"

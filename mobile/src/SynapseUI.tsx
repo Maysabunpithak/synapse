@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  type ScrollViewInstance,
   View,
 } from "react-native";
 import {
@@ -212,7 +213,7 @@ export default function SynapseUI(p: Props) {
 
 function SynapseContent(p: Props) {
   const roomEnvironment = useRoomEnvironment(p.api, p.demo);
-  const scrollRef = useRef<ScrollView>(null);
+  const scrollRef = useRef<ScrollViewInstance>(null);
   const [entered, setEntered] = useState(false);
   const [signup, setSignup] = useState(false);
   const [email, setEmail] = useState("");

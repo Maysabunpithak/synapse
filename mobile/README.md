@@ -136,7 +136,7 @@ Without the environment variable, the dashboard deliberately displays sample dev
 The microphone uses Expo Audio → `/transcribe` → `/ai/command`. Audio uploads
 are limited to 8 MB, use the recording's actual format, and return explicit errors
 for missing permissions/configuration, empty speech and provider failures.
-Recording integration follows the [Expo Audio SDK 57 documentation](https://docs.expo.dev/versions/v57.0.0/sdk/audio/).
+Recording integration follows the [Expo Audio SDK 58 documentation](https://docs.expo.dev/versions/v58.0.0/sdk/audio/).
 
 ## Device pairing
 

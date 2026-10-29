@@ -18,6 +18,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  type ScrollViewInstance,
   View,
 } from "react-native";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -108,7 +109,7 @@ export default function App() {
   const [pairedDeviceName, setPairedDeviceName] = useState<string | null>(null);
   const [pairingErrorDetail, setPairingErrorDetail] = useState<string | null>(null);
   const [showPairingErrorDetail, setShowPairingErrorDetail] = useState(false);
-  const pairingScroll = useRef<ScrollView>(null);
+  const pairingScroll = useRef<ScrollViewInstance>(null);
   const pairingPhase = isPreparingTuya ? "loading" : pairedDeviceName !== null ? "success"
     : isStartingTuyaPairing ? "pairing" : !tuyaAccountReady ? "account"
     : selectedTuyaHomeId === null || choosingTuyaHome ? "home" : wifiDetailsReady ? "ready" : "wifi";

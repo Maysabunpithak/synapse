@@ -35,13 +35,11 @@ type TuyaDevicePairingModule = {
     password: string,
   ): Promise<{ started: boolean; timeoutSeconds: number }>;
   stopPairing(): { stopped: boolean };
-} & InstanceType<
-  EventEmitter<{
-    onPairingProgress: (event: TuyaPairingProgress) => void;
-    onPairingSuccess: (event: TuyaPairingSuccess) => void;
-    onPairingError: (event: TuyaPairingError) => void;
-  }>
->;
+} & EventEmitter<{
+  onPairingProgress: (event: TuyaPairingProgress) => void;
+  onPairingSuccess: (event: TuyaPairingSuccess) => void;
+  onPairingError: (event: TuyaPairingError) => void;
+}>;
 
 // Expo Go intentionally returns null: Tuya requires a custom Android build.
 export default requireOptionalNativeModule<TuyaDevicePairingModule>(
