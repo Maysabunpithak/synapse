@@ -1,0 +1,6 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "asset": "synapse-login-front-v3.png",
+  "reference": "synapse-login-cheeky-palm-v2.png",
+  "prompt": "Edit this Synapse two-pose house sprite atlas to a STRICT STRAIGHT-ON FRONT VIEW. Camera centered at face height, orthographic frontal elevation: symmetric triangular orange gable roof, flat front cream wall, horizontal baseline, vertical walls, NO visible side wall, NO three-quarter perspective, NO tilt. Keep the polished rounded 3D material/shading, cream chimney, brown lowered sunglasses, mischievous eyebrow and smile in left cell, wink tongue smile in right cell. Both poses identical silhouettes, camera, size and position within two exactly equal square cells on a 2:1 canvas. Keep only the arm on viewer's RIGHT with EMPTY upturned palm; no bulb (animated separately), no left arm, no legs or feet (rigged in code). Palm must be fully visible. Layout per square cell: roof apex near (46%,14%), house front spans x20%-70%, roof x12%-78%, bottom of house at y83%, right palm centered (86%,68%). Identical landmarks in both cells. 8% transparent margin around all sides, no seam spill. Genuine transparent alpha background, no shadows outside subject, no text or props. Change the viewing direction, preserve character identity and expressions."
+}

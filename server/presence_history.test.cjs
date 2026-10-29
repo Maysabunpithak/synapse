@@ -1,0 +1,20 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs'), os = require('node:os'), path = require('node:path');
+const { createPresenceHistory, MAX_AGE } = require('./presence_history.cjs');
+test('presence persists, confirmations do not invent arrivals, missing data becomes unknown', t => {
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'synapse-presence-'));
+ t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
+ const file=path.join(dir,'history.json'), store=createPresenceHistory(file), now=100000;
+ assert.equal(store.snapshot(now).atHome,null);
+ store.record(true,'phone-wifi',now); store.record(true,'phone-wifi',now+1000);
+ assert.equal(store.history()[1].event,'confirmation');
+ const restored=createPresenceHistory(file);
+ assert.equal(restored.snapshot(now+2000).atHome,true);
+ assert.equal(restored.snapshot(now+1000+MAX_AGE).atHome,null);
+ restored.record(null,'phone-wifi',now+3000);
+ assert.equal(restored.snapshot(now+3000).atHome,null);
+ restored.record(false,'phone-wifi',now+4000);
+ assert.equal(restored.snapshot(now+4000).atHome,false);
+ assert.equal(restored.history()[0].time,now);
+});

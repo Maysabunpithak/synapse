@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Synapse",
+    "slug": "synapse-smart-home",
+    "version": "1.0.0",
+    "scheme": "synapse",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maysa.synapse",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.maysa.synapse",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "./plugins/with-tuya-android",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow Synapse to use the microphone for Thai smart home voice commands.",
+          "enableBackgroundRecording": false
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1868effb-00b0-4b5f-842f-8470e245f0e5"
+      }
+    },
+    "owner": "synapse-smart-home"
+  }
+}

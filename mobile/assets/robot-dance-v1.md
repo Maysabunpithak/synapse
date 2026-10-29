@@ -1,0 +1,11 @@
+# Synapse dance animation
+
+Generated with the built-in Imagegen tool using `robot-emotions-v3.png` as character identity and a contact sheet from the user's `156275-812085326.mp4` as motion reference.
+
+This is a new 16-frame illustrated dance inspired by the reference, not motion capture or a frame-exact video replacement. The 4x4 sheet is played by `src/RobotDance.tsx` while idle or celebrating. Reduced motion and background state suspend playback. Voice states retain their original expressions.
+
+## Generation prompt
+
+Create a production animation sprite sheet, exactly 4 columns by 4 rows, 16 equal square cells, overall square 2048x2048 image. Input 1 is the CHARACTER IDENTITY reference: preserve the orange and ivory Synapse robot, house-shaped orange roof head with circular cross window, black screen face with warm yellow eyes and smile, orange round torso with ivory chest reading "Synapse", short orange arms and white mitten hands, glowing hovering thruster, no legs. Input 2 is MOTION REFERENCE ONLY: green house dancing with alternate arms raised, rhythmic torso lean and small quarter turns. Do NOT reproduce green character, sunglasses, legs or blue backdrop.
+Make 16 sequential closely-spaced animation frames of ONE smooth happy dance loop, row-major left-to-right top-to-bottom. Frame 0 front smiling arms bent low; 1-3 gradually lean left and raise right mitten near temple; 4 left lean maximum slight three-quarter left turn; 5-7 return front arms moving down; 8 front midpoint arms bent; 9-11 lean right raising left mitten; 12 right lean maximum slight three-quarter right turn; 13-15 return to starting front pose. Arms must visibly articulate and change pose, not merely rotate a static image. Consistent identical robot proportions, size, camera distance, studio lighting, material and identity every cell. Head/body height 390 pixels within each 512 cell, centered at same anchor with safe 45px clearance on all edges. Hovering thruster stays around same baseline. Clean genuine transparent background with alpha, no gradients/background scenery or floor, no shadows crossing cells, no grid, no borders, no numbers or labels. High quality smooth 3D cartoon render matching reference robot. Exactly 16 robots, one per equal cell.
+

@@ -1,0 +1,22 @@
+﻿const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('fs');
+const ts = require('typescript');
+const Module = require('module');
+const file = require('path').resolve('mobile/src/roomActivityRequest.ts');
+const compiled = ts.transpileModule(fs.readFileSync(file, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
+const mod = { exports: {} };
+const localRequire = Module.createRequire(file);
+new Function('require', 'module', 'exports', compiled)((name) => localRequire(name === './caretakerPath' ? './caretakerPath.ts' : name), mod, mod.exports);
+const { routeToRoomActivity } = mod.exports;
+const leg = (a, b, id) => ({ path: [a, b], length: Math.hypot(a.x-b.x,a.y-b.y), dwell: 1000, activity: 'rest', targetId: id, task: 'read' });
+test('requested activity follows existing safe segments without jumping and preserves a closed route', () => {
+  const a={x:0,y:0}, b={x:20,y:0}, c={x:20,y:20}, d={x:0,y:20};
+  const route=[leg(a,b,'b'),leg(b,c,'c'),leg(c,d,'d'),leg(d,a,'a')];
+  const requested=routeToRoomActivity(route,0,'d');
+  assert.deepEqual(requested[0].path,[b,c,d]);
+  assert.equal(requested[0].targetId,'d');
+  assert.equal(requested[0].length,40);
+  for(let i=0;i<requested.length;i++) assert.deepEqual(requested[i].path.at(-1),requested[(i+1)%requested.length].path[0]);
+  assert.equal(routeToRoomActivity(route,0,'missing'),null);
+});

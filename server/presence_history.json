@@ -1,0 +1,114 @@
+[
+  {
+    "time": 1790813608387,
+    "timestamp": "2026-10-01T00:13:28.387Z",
+    "atHome": true,
+    "source": "server-snapshot",
+    "event": "home-observed"
+  },
+  {
+    "time": 1790814175391,
+    "timestamp": "2026-10-01T00:22:55.391Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790815978087,
+    "timestamp": "2026-10-01T00:52:58.087Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790816003161,
+    "timestamp": "2026-10-01T00:53:23.161Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790817811037,
+    "timestamp": "2026-10-01T01:23:31.037Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790819613850,
+    "timestamp": "2026-10-01T01:53:33.850Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790821416647,
+    "timestamp": "2026-10-01T02:23:36.647Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790823506209,
+    "timestamp": "2026-10-01T02:58:26.209Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1790824686255,
+    "timestamp": "2026-10-01T03:18:06.255Z",
+    "atHome": null,
+    "source": "phone-wifi",
+    "event": "unknown"
+  },
+  {
+    "time": 1790824688291,
+    "timestamp": "2026-10-01T03:18:08.291Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "home-observed"
+  },
+  {
+    "time": 1790824697446,
+    "timestamp": "2026-10-01T03:18:17.446Z",
+    "atHome": null,
+    "source": "phone-wifi",
+    "event": "unknown"
+  },
+  {
+    "time": 1790825048123,
+    "timestamp": "2026-10-01T03:24:08.123Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "home-observed"
+  },
+  {
+    "time": 1790825050518,
+    "timestamp": "2026-10-01T03:24:10.518Z",
+    "atHome": null,
+    "source": "phone-wifi",
+    "event": "unknown"
+  },
+  {
+    "time": 1793092249193,
+    "timestamp": "2026-10-27T09:10:49.193Z",
+    "atHome": null,
+    "source": "phone-wifi",
+    "event": "confirmation"
+  },
+  {
+    "time": 1793092250338,
+    "timestamp": "2026-10-27T09:10:50.338Z",
+    "atHome": true,
+    "source": "phone-wifi",
+    "event": "home-observed"
+  },
+  {
+    "time": 1793092521412,
+    "timestamp": "2026-10-27T09:15:21.412Z",
+    "atHome": null,
+    "source": "phone-wifi",
+    "event": "unknown"
+  }
+]

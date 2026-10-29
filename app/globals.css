@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #BA9A81;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {  
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); } 
+}
+
+@keyframes float-shadow {
+  0%, 100% { transform: scaleX(1); opacity: 0.3; }
+  50% { transform: scaleX(0.7); opacity: 0.15; }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: translateY(-6px) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(-1deg); }
+  66% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes wander {
+  0%   { transform: translate(0px, 0px); }
+  20%  { transform: translate(40px, -20px); }
+  40%  { transform: translate(20px, 20px); }
+  60%  { transform: translate(-40px, -10px); }
+  80%  { transform: translate(-20px, 20px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.robot-float  { animation: float 3s ease-in-out infinite; }
+.robot-think  { animation: wobble 2s ease-in-out infinite; }
+.robot-shadow { animation: float-shadow 3s ease-in-out infinite; }
+.robot-wander { animation: wander 8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .robot-float, .robot-think, .robot-shadow, .robot-wander { animation: none; }
+}
+
+@keyframes sparkle {
+  0%   { transform: translate(0, 0) scale(0); opacity: 0; }
+  30%  { opacity: 1; transform: translate(var(--tx), var(--ty)) scale(1); }
+  100% { transform: translate(var(--tx2), var(--ty2)) scale(0); opacity: 0; }
+}
+
+@keyframes float-up {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-80px) scale(1.3); opacity: 0; }
+}
+
+.sparkle { animation: sparkle var(--dur) ease-out infinite; }
+.float-up { animation: float-up 1.2s ease-out forwards; }
+
+@keyframes rainfall {
+  0%   { transform: translateY(-40px) translateX(0px); opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { transform: translateY(110vh) translateX(12px); opacity: 0; }
+}
+.rain-drop {
+  position: absolute;
+  width: 1px;
+  border-radius: 9999px;
+  animation: rainfall linear infinite;
+}
+
+@keyframes cloud-drift {
+  0%   { transform: translateX(0px); }
+  50%  { transform: translateX(18px); }
+  100% { transform: translateX(0px); }
+}
+.cloud-drift { animation: cloud-drift 8s ease-in-out infinite; }

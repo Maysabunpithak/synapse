@@ -1,0 +1,5 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "asset": "synapse-bulb-back-v1.png",
+  "prompt": "Edit this exact lime-green lightbulb body cutout for an animation rotation. Make the BACK VIEW: remove the two black eyes and black smiling mouth completely, reconstruct the smooth glossy lime/yellow bulb surface. Keep EXACTLY the same silhouette, outline, canvas size, transparent margins, height, width, position, lighting highlights, neck, chrome screw base and silver tip. Do not add any facial features, limbs, props, glow or shadows. True transparent alpha background. This must align pixel-for-pixel with the reference for a front-to-back animation dissolve; change only facial markings to clean bulb surface."
+}

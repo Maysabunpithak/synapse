@@ -1,0 +1,12 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "assets": [
+    "synapse-login-cheeky-palm-v2.png",
+    "synapse-palm-bulb-body-v1.png"
+  ],
+  "sourceUrl": "https://pixabay.com/videos/green-lightbulb-idea-3d-cartoon-115983/",
+  "sourceVideo": "115983-706323946 (1).mp4",
+  "usage": "Login-only house with empty palm and separately animated bulb body, chrome limbs and alternating footsteps. The video is a visual reference.",
+  "housePrompt": "Edit this exact two-pose Synapse house animation atlas. Keep canvas 2:1, same orange roof, cream walls, chimney, brown sunglasses, camera and body geometry, same framing and palm positions in both cells. REMOVE the green lightbulb character completely from BOTH palms, including all its arms and legs; reconstruct clean EMPTY open palms, the bulbs will be separately animated. Keep the complete holding arm and open hand. Make the house expression much more cheeky and mischievous, playful not mean: LEFT pose one eyebrow cocked high, half-lidded knowing eyes peeking over lowered sunglasses, pronounced asymmetric side smirk. RIGHT pose playful wink with one eye shut, other eye peeking at its own open palm, wide teasing grin and tiny tongue showing. Mouth expressions must be clearly legible at small size. Preserve identical house silhouette and palm placement between poses for smooth animation. No house legs or feet, and no house left arm (these are animated in code). Two equal square cells with transparent margins, true alpha transparency, no background/checkerboard/text/new objects. Each pose fully contained, palms not cut off or touching center seam. Maintain polished 3D cartoon rendering and the exact Synapse identity.",
+  "bulbPrompt": "Create a clean animation rig BODY CUTOUT of exactly this smiling anthropomorphic lightbulb. Preserve its round yellow-green lime glossy bulb glass head, tiny round black eyes and simple curved black friendly smile, narrow green neck, metallic silver screw base and rounded silver tip, same three-quarter orientation. REMOVE both arms, both hands, both legs, both feet completely: they will be animated separately in code. No limb stubs. No shadow, no background, no glow outside silhouette, no extra objects or text. True transparent alpha. One centered square image, the lightbulb body from head to silver tip occupies 90% of canvas height, centered horizontally with even margins. Match the reference design rather than inventing a different lightbulb."
+}

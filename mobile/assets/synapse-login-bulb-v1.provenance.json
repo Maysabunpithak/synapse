@@ -1,0 +1,12 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "asset": "synapse-login-bulb-v1.png",
+  "sourceVideo": "115983-706323946 (1).mp4",
+  "sourceUrl": "https://pixabay.com/videos/green-lightbulb-idea-3d-cartoon-115983/",
+  "referenceFrameSeconds": 3,
+  "usage": "New rendered likeness of the smiling lime lightbulb held by Synapse; the original video is a reference, not a video background or flame effect.",
+  "characterReference": "synapse-house-happy-walk-body-v1.png",
+  "finalEditPrompt": "Edit this exact two-cell sprite atlas. Preserve both house-and-green-lightbulb poses, all design, colors, sunglasses, expressions and the bulb smiling face. Fix only the framing: each character MUST fit wholly inside its own equal square half of this wide image with a full 8% clear TRANSPARENT margin on ALL four sides of EACH cell. The holding palm and the lightbulb's tiny chrome legs must be complete, never touching the center seam or right edge. Scale BOTH complete poses down identically to fit. Align both house bodies to the same baseline and position, with same camera and proportions. Keep no house legs, no house feet, no house left arm as in source; keep the holding right arm and both tiny lightbulb arms/legs. Exactly two equal square cells side by side, no lines separating, no text, no labels, no shadow, true transparent alpha background. Entire width to height ratio exactly 2:1. Crisp polished 3D render. All transparent margins must be empty, not checkerboard.",
+  "atlas": { "width": 1774, "height": 887, "secondPoseOffsetX": 845, "firstPoseRightClip": 910, "secondPoseLeftClip": 65 },
+  "animation": "Login-only articulated legs and free arm, 12.8 second walk/laugh cycle, reduced-motion still pose. Holding hand and bulb share the same generated body layer."
+}

@@ -2,6 +2,51 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Typhoon AI integration
+
+The Express services support Gemini (default) or Typhoon for Thai command
+interpretation and behavior prediction. Select the provider in the root `.env`:
+
+To use Gemini first and automatically use Typhoon on HTTP 429 (quota/rate limit)
+or 503 (temporary overload), configure both keys:
+
+```dotenv
+AI_PROVIDER=gemini
+AI_FALLBACK_PROVIDER=typhoon
+GEMINI_API_KEY=your-gemini-key
+TYPHOON_API_KEY=your-typhoon-key
+```
+
+The backup receives the same prompt immediately, without waiting through Gemini
+retries. Each new request tries Gemini first. Cost entries identify the actual
+provider and `fallback_from`. Authentication and malformed-request errors do not
+silently switch providers. If both services fail, the existing rule fallback is
+used. To use Typhoon as the primary provider instead:
+
+```dotenv
+AI_PROVIDER=typhoon
+TYPHOON_API_KEY=your-key-from-the-typhoon-playground
+TYPHOON_MODEL=typhoon-v2.5-30b-a3b-instruct
+```
+
+Use the [Typhoon API documentation](https://docs.opentyphoon.ai/en/api-reference/)
+to obtain a key. Keep keys in the server's root `.env`, never in mobile/public
+environment variables. Restart both `node server/ai.cjs` (port 5000) and
+`node server/server.cjs` (port 4000) after changing the provider. Set
+`AI_PROVIDER=gemini` to switch back. Groq voice transcription is unchanged.
+
+`server/ai_provider.cjs` handles the two API formats. Both services retain their
+existing rule fallback when an AI request fails. Typhoon costs are recorded as
+unknown unless `TYPHOON_PRICE_INPUT_PER_M` and `TYPHOON_PRICE_OUTPUT_PER_M` are
+set; `/ai-cost` reports `unpriced_calls` and totals only known costs across the
+historical log. It does not apply Gemini prices to Typhoon calls.
+
+Run the mocked provider tests without API credentials or device actions:
+
+```bash
+node --test server/ai_provider.test.cjs
+```
+
 First, run the development server:
 
 ```bash

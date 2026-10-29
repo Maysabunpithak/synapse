@@ -1,0 +1,14 @@
+# House idle activities
+
+Asset: `synapse-house-activities-v1.png` (4 columns × 3 rows).
+
+Created with the built-in Imagegen tool, using `synapse-house-poster-hq.png` as the character identity reference. These are new illustrated poses, not frames extracted from the source video. The original recolored dance clip remains reserved for confirmed command success.
+
+Frames 8–11 remain in use for standing, sitting/resting, sleeping, and wake/stretch. Walking cells 0–7 have been superseded by the articulated animation in `HouseWalk.tsx`; see `synapse-house-walk-body-v1.md`. The sheet is rendered through a clipped image viewport; movement stays inside the 268px voice touch area. Idle sequence: stand, walk right, rest, walk left, rest, stroll, rest, then sleep after 47 seconds. Touch wakes immediately without requiring a microphone recording; long hold still controls voice. Reduced motion uses static poses and background state suspends activity.
+
+## Final generation prompt
+
+Production sprite sheet for a mobile animated companion. Reference image is the EXACT character identity to preserve: a living cream house, orange/caramel pitched roof and cream chimney, large dark-brown sunglasses, subtle smiling mouth, two thin cream arms with mitten hands, two thin sandy legs with wide flat brown feet. NO robot, NO roof-face, NO additional character, no changes to architecture or proportions. Maintain the reference's simple 3D-rendered house character.
+Output one rectangular image with EXACTLY FOUR COLUMNS AND THREE ROWS of equal square cells (4:3 aspect, ideally 2048x1536). Exactly 12 poses, one per cell. Read row-major. Cells 0-7 are eight closely spaced consecutive frames of a smooth WALK cycle, all facing three-quarter RIGHT: left step contact, left down, left passing, left up, right step contact, right down, right passing, right up. Alternate feet clearly forward and backward, feet actually changing gait; arms counter-swing naturally. Body upright relaxed, NOT dancing, NOT jumping. Identical body position/size/light/camera and foot baseline across all walk cells. Cell 8: neutral standing at ease facing three-quarter right, arms down. Cell 9: sitting resting on ground, legs out in front, relaxed arms. Cell 10: visibly SLEEPING sitting slumped on ground, body gently leaning, hands resting, sunglasses slid slightly down so CLOSED eyes visible above them; relaxed mouth. Cell 11: waking and stretching both arms gently overhead, legs planted.
+True transparent background and no floor or shadows, no labels or gridlines, no typography or letters, no props. Every cell must keep entire character inside its own square with 50px safe margins on every side at 512px per cell. Character size approximately 400px high standing. Sitting poses naturally shorter but same physical head/body size. Crisp high resolution, clean edges, consistent warm palette and identity. These are assets for distinct walking/resting/sleeping states, not concept art.
+

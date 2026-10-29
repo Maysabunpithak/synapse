@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'expo-module-gradle-plugin'
+
+group = 'expo.modules.tuyadevicepairing'
+version = '0.1.0'
+
+expoModule {
+  canBePublished false
+}
+
+android {
+  namespace 'expo.modules.tuyadevicepairing'
+  compileSdkVersion rootProject.ext.compileSdkVersion
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+  }
+
+  packaging {
+    jniLibs {
+      pickFirsts += ['lib/*/libc++_shared.so']
+    }
+  }
+}
+
+// Tuya's published Home SDK marks this optional annotation artifact as a snapshot,
+// but its own integration guide requires excluding it from app builds.
+configurations.configureEach {
+  exclude group: 'com.thingclips.smart', module: 'thingsmart-modularCampAnno'
+}
+
+dependencies {
+  implementation project(':expo-modules-core')
+
+  // Versions are supplied by the Tuya SmartLife SDK package in private/tuya-sdk.
+  implementation 'com.alibaba:fastjson:1.1.67.android'
+  implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.14.9'
+  implementation 'com.thingclips.smart:thingsmart:7.8.0'
+  // Tuya's SDK package includes this required security implementation.
+  implementation files("${rootProject.projectDir}/../../app/security-algorithm-1.0.0-beta.aar")
+}

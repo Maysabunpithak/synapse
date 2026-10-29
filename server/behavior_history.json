@@ -1,0 +1,260 @@
+[
+  {
+    "timestamp": "2026-10-01T06:18:54",
+    "voice_input": "กลับบ้าน",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true,
+    "source": "scene"
+  },
+  {
+    "timestamp": "2026-10-01T06:20:01",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T06:46:32",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T06:46:35",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:02:00",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:02:02",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:03:05",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:03:08",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:04:38",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:04:39",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:05:38",
+    "voice_input": "mobile-light-control",
+    "ai_action": "adjust_brightness",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปรับแสง",
+    "success": true,
+    "brightness": 40
+  },
+  {
+    "timestamp": "2026-10-01T10:05:38",
+    "voice_input": "mobile-light-control",
+    "ai_action": "adjust_brightness",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปรับแสง",
+    "success": true,
+    "brightness": 40
+  },
+  {
+    "timestamp": "2026-10-01T10:18:11",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-01T10:18:13",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:11:05",
+    "voice_input": "ปิดไฟห้องนั่งเล่น",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true,
+    "source": "voice"
+  },
+  {
+    "timestamp": "2026-10-27T16:11:19",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:11:20",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:11:21",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:11:22",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:11:23",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:13:35",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:13:45",
+    "voice_input": "โหมดดูจอ",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true,
+    "mode": "screen",
+    "source": "scene"
+  },
+  {
+    "timestamp": "2026-10-27T16:13:49",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:13:49",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:13:51",
+    "voice_input": "ui-toggle",
+    "ai_action": "on",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "เปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:13:54",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-27T16:13:57",
+    "voice_input": "ui-toggle",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true
+  },
+  {
+    "timestamp": "2026-10-29T15:07:52",
+    "voice_input": "ออกจากบ้าน",
+    "ai_action": "off",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "ปิด",
+    "success": true,
+    "source": "scene"
+  },
+  {
+    "timestamp": "2026-10-29T15:07:52",
+    "voice_input": "ออกจากบ้าน",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_socket_1",
+    "actual_result": "ปิด",
+    "success": true,
+    "source": "scene"
+  },
+  {
+    "timestamp": "2026-10-29T15:07:52",
+    "voice_input": "ออกจากบ้าน",
+    "ai_action": "off",
+    "entity_id": "switch.smart_plug_2_socket_1",
+    "actual_result": "ปิด",
+    "success": true,
+    "source": "scene"
+  },
+  {
+    "timestamp": "2026-10-29T15:07:57",
+    "voice_input": "กลับบ้าน",
+    "ai_action": "on",
+    "entity_id": "light.a60_rgb_w_wifi",
+    "actual_result": "เปิด",
+    "success": true,
+    "source": "scene"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "tuya-device-pairing",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "expo": "*",
+    "expo-modules-core": "*"
+  }
+}
